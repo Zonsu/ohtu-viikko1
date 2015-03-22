@@ -35,17 +35,34 @@ public class StaticsticsTest {
         }
     };
 
-    @Before
+        @Before
     public void setUp() {
+        stats = new Statistics(readerStub);
     }
 
-    @After
-    public void tearDown() {
-    }
-    
     @Test
-    public void palauttaakoPisteetOikein() {
-        
+    public void loytyyPelaaja() {
+        Player p = stats.search("Kurri");
+        assertEquals("Kurri", p.getName());
+    }
+
+
+    @Test
+    public void eiLoydyPelaajaa() {
+        Player p = stats.search("lul");
+        assertEquals(null, p);
+    }
+
+    @Test
+    public void loytyyJoukkue() {
+        List j = stats.team("EDM");
+        assertEquals(3, j.size());
+    }
+
+    @Test
+    public void palauttaaParhaanPelaajan() {
+        List<Player> p = stats.topScorers(1);
+        assertEquals("Gretzky", p.get(0).getName());
     }
 
 }
