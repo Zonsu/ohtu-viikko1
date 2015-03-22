@@ -5,10 +5,7 @@
  */
 package ohtu.verkkokauppa;
 
-/**
- *
- * @author johanna
- */
+
 public interface KauppaInterface {
 
     void aloitaAsiointi();
