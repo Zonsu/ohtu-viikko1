@@ -29,5 +29,30 @@ public class Main {
         for (Player player : stats.matches(m3)) {
             System.out.println(player);
         }
+        System.out.println("\n-----------------asdasd-----------------\n");
+        
+        QueryBuilder query = new QueryBuilder();
+
+        System.out.println("");
+        Matcher m4 = query.playsIn("NYR")
+                .hasAtLeast(10, "goals")
+                .hasFewerThan(25, "assists").build();
+
+        for (Player player : stats.matches(m4)) {
+            System.out.println(player);
+        }
+
+        System.out.println("");
+        Matcher m5 = query.or(
+                query.playsIn("PHI")
+                .hasAtLeast(10, "goals")
+                .hasFewerThan(15, "assists").build(),
+                query.playsIn("EDM")
+                .hasAtLeast(50, "points").build()
+        ).build();
+        for (Player player : stats.matches(m5)) {
+            System.out.println(player);
+        }
+
     }
 }
