@@ -1,13 +1,13 @@
 package ohtu.kivipaperisakset;
 
-// Tuomari pitää kirjaa ensimmäisen ja toisen pelaajan pisteistä sekä tasapelien määrästä.
-public class Tuomari {
+// Pistelasku pitää kirjaa ensimmäisen ja toisen pelaajan pisteistä sekä tasapelien määrästä.
+public class Pistelasku {
 
     private int ekanPisteet;
     private int tokanPisteet;
     private int tasapelit;
 
-    public Tuomari() {
+    public Pistelasku() {
         this.ekanPisteet = 0;
         this.tokanPisteet = 0;
         this.tasapelit = 0;
@@ -41,7 +41,6 @@ public class Tuomari {
         } else if ("p".equals(eka) && "k".equals(toka)) {
             return true;
         }
-
         return false;
     }
 
