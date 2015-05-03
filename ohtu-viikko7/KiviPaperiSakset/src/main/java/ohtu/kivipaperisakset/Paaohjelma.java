@@ -24,24 +24,7 @@ public class Paaohjelma {
             }
             System.out.println("peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s");
             komento.pelaa();
-            
-//            if (vastaus.endsWith("a")) {
-//                System.out.println("peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s");
-//                Peli kaksinpeli = Peli.uusiKaksinPeli();
-//                kaksinpeli.pelaa();
-//            } else if (vastaus.endsWith("b")) {
-//                System.out.println("peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s");
-//                Peli parempiTekoaly = Peli.uusiParempiTekoaly();
-//                parempiTekoaly.pelaa();
-//            } else if (vastaus.endsWith("c")) {
-//                System.out.println("peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s");
-//                Peli tkoaly = Peli.uusiTkoaly();
-//                tkoaly.pelaa();
-//            } else {
-//                break;
-//            }
 
         }
-
     }
 }
